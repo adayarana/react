@@ -40,7 +40,7 @@
 
 1. Clone the repository
 
-    ### `git clone https://github.com/adayarana/reac.git`
+    ### `git clone https://github.com/adayarana/react.git`
 
 2. Install dependencies
 
