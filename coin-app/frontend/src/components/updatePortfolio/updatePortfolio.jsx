@@ -93,6 +93,7 @@ function updatePortfolio({ currentTransaction }) {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.price?.message}
@@ -110,6 +111,7 @@ function updatePortfolio({ currentTransaction }) {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.quantity?.message}
@@ -127,6 +129,7 @@ function updatePortfolio({ currentTransaction }) {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.spent?.message}

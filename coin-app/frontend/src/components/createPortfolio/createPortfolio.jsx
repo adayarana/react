@@ -84,6 +84,7 @@ function createPortfolio() {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.price?.message}
@@ -101,6 +102,7 @@ function createPortfolio() {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.quantity?.message}
@@ -118,6 +120,7 @@ function createPortfolio() {
               min: { value: 0.001, message: 'Minimun value 0.001' }
             })}
             type="number"
+            step="0.01"
           />
           <p className="error-message">
             {formState.errors?.spent?.message}
