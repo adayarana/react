@@ -93,5 +93,9 @@
         text-decoration-color: $color-gold;
         text-decoration-thickness: 0.15rem;
     }
+
+    .nav-link:active, .nav-link:active > data {
+        color: $color-gold;
+    }
  
 }

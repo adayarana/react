@@ -27,6 +27,7 @@ button:hover {
   }
 
 input {
+    caret-color: $color-grey-border;
     cursor: pointer;
     border-radius: 50em;
     border: 1.5px solid $color-grey-border;
