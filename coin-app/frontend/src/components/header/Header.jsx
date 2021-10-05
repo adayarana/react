@@ -64,6 +64,7 @@ function Header() {
                 name="search"
                 type="search"
                 placeholder="Search"
+                autoComplete="off"
                 value={search}
                 onChange={onChange}
               />
