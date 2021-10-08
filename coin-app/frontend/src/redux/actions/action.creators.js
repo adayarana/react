@@ -83,7 +83,7 @@ export function logout() {
 export function getUserToken(token) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(process.env.REACT_APP_DDBB_USERPROFILE_URL, {
+      const { data } = await axios.get(process.env.REACT_APP_DDBB_USERPROFILE_URL, {
         headers: {
           Authorization: `Bearer ${token}`
         }
