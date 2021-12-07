@@ -13,7 +13,10 @@ function Header() {
 
   const onChange = ({ target }) => setSearch(target.value);
 
-  const newSearch = coins.filter((coin) => coin[0].includes(search));
+  const newSearch = coins.filter((coin) => coin[1].name.toLowerCase()
+    .includes(search.toLowerCase())
+  || coin[1].symbol.toLowerCase()
+    .includes(search.toLowerCase()));
 
   useEffect(() => {
     dispatch(getFilteredCoins(newSearch));

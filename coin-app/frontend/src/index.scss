@@ -7,7 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+  }
   
 button {
     all: unset;
@@ -20,7 +20,11 @@ button {
     border-radius: 50em;
     transition: background linear 1s;
     box-shadow: 1px 2.5px $color-grey-border;
-}
+    vertical-align: middle;
+    touch-action: manipulation;
+    white-space: nowrap;
+    user-select: none;
+  }
 
 button:hover {
     background: $color-grey-hover;
@@ -46,7 +50,7 @@ input:focus {
     border: 3px solid $color-grey-border;
   }
 
-  select {
+select {
     border: 1.5px solid $color-grey-border;
     cursor: pointer;
     outline: none;
@@ -58,18 +62,42 @@ select:focus {
     border: 3px solid $color-grey-border;
   }
 
+input::placeholder {
+    color: $color-grey-border;
+    font-style: italic;
+  }
+
 ul {
     list-style-type: none;
   }
   
-  a {
+a {
     text-decoration: none;
   }  
 
-   hr {
+hr {
      margin: 1rem auto 1rem auto;
    }
 
-   small {
+small {
     padding: 0.5rem;
    }
+
+::selection {
+    background-color: $color-grey-background-button;
+    color: $color-gold;
+  }
+
+.fa-star {
+    color: $color-gold;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 415px) {
+
+  .fa-star:hover {
+      transform: scale(1.3) rotate(0.5turn);
+      transition: 1s;
+      font-weight: bold;
+  }
+}

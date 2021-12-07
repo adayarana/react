@@ -41,7 +41,7 @@ function Home() {
               <th className="data__coin">Coin:</th>
               <th className="data__price">Price:</th>
               <th className="data__market-cap">Market Cap:</th>
-              <th className="data__volume">24h Volume:</th>
+              <th className="data__volume">Market Cap Change 24h:</th>
               <th className="data__change">24h Change:</th>
             </tr>
           </thead>
@@ -59,19 +59,19 @@ function Home() {
                   />
                 </td>
                 <td className="data__coin">
-                  {coin[0]}
+                  {coin[1].name}
                 </td>
                 <td className="data__price">
-                  {coin[1].eur.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
+                  {coin[1].current_price.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
                 </td>
                 <td className="data__market-cap">
-                  {coin[1].eur_market_cap.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
+                  {coin[1].market_cap.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
                 </td>
                 <td className="data__volume">
-                  {coin[1].eur_24h_vol.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
+                  {coin[1].market_cap_change_24h.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}
                 </td>
                 <td className="data__change">
-                  {`${coin[1].eur_24h_change.toFixed(2)} %`}
+                  {`${coin[1].price_change_percentage_24h_in_currency.toFixed(2)} %`}
                 </td>
               </tr>
             )
