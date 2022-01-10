@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import {
@@ -25,12 +26,17 @@ function updatePortfolio({ currentTransaction }) {
     defaultValues: currentTransaction
   });
 
+  const toastSuccess = (message) => {
+    toast.success(message);
+  };
+
   const onSubmit = (data, event) => {
     event.preventDefault();
     const newTransaction = {
       ...data
     };
     dispatch(updateTransaction(newTransaction.id, newTransaction));
+    toastSuccess('Transaction updated successfully');
   };
 
   useEffect(() => {

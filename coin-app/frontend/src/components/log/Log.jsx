@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -24,13 +25,19 @@ function Login() {
     }
   }, [formState, reset]);
 
+  const toastSuccess = (message) => {
+    toast.success(message);
+  };
+
   const onSubmit = (data, event) => {
     event.preventDefault();
     const newUser = {
       ...data
     };
     dispatch(login(newUser));
+    toastSuccess('Log In successfully');
   };
+
   return (
     !user.token ? (
       <div className="login-container">
@@ -81,7 +88,7 @@ function Login() {
       </div>
     ) : (
       <div className="login-container">
-        <button type="button" onClick={() => { dispatch(logout()); }}>Log Out</button>
+        <button type="button" onClick={() => { dispatch(logout()); toastSuccess('Log Out successfully'); }}>Log Out</button>
       </div>
     )
   );

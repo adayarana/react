@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { Redirect, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,12 +27,17 @@ function Signup() {
     }
   }, [formState, reset]);
 
+  const toastSuccess = (message) => {
+    toast.success(message);
+  };
+
   const onSubmit = (data, event) => {
     event.preventDefault();
     const newUser = {
       ...data
     };
     dispatch(signup(newUser));
+    toastSuccess('Sign Up successfully');
   };
   return (
     !user.token ? (

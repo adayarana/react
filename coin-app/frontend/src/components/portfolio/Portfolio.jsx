@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -26,6 +27,10 @@ function Portfolio() {
     quantity: '',
     spent: ''
   });
+
+  const toastError = (message) => {
+    toast.error(message);
+  };
 
   useEffect(() => {
     if (token?.token) {
@@ -69,6 +74,7 @@ function Portfolio() {
                       onClick={() => {
                         setDeleting(!deleting);
                         dispatch(deleteTransaction(transactionItem.id));
+                        toastError('Transaction deleted successfully');
                       }}
                     >
                       Delete
@@ -115,6 +121,7 @@ function Portfolio() {
                   type="button"
                   onClick={() => {
                     dispatch(deleteAllTransactions());
+                    toastError('Transactions deleted successfully');
                   }}
                 >
                   Delete All

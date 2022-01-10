@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -13,6 +14,23 @@ import './index.scss';
 
 ReactDOM.render(
   <Provider store={configureStore()}>
+    <Toaster
+      position="top-center"
+      containerStyle={{
+        position: 'relative'
+      }}
+      toastOptions={{
+        duration: 4000,
+        className: '',
+        style: {
+          border: '1.5px solid #ADA996',
+          borderRadius: '10px',
+          background: '#F2F2F2',
+          padding: '0.75rem',
+          color: '#B29600'
+        }
+      }}
+    />
     <Router>
       <Header />
       <Switch>
