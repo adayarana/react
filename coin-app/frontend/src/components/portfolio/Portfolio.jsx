@@ -64,7 +64,7 @@ function Portfolio() {
               transactions.map((transactionItem) => (
                 <tr className="table__data" key={transactionItem.id}>
                   <td className="data__type">{transactionItem.type}</td>
-                  <td className="data__coin">{transactionItem.coin}</td>
+                  <td className="data__coin">{transactionItem.coin.toLowerCase()}</td>
                   <td className="data__price-portfolio">{transactionItem.price}</td>
                   <td className="data__quantity">{transactionItem.quantity}</td>
                   <td className="data__spent">{transactionItem.spent}</td>

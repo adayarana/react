@@ -25,8 +25,8 @@ ReactDOM.render(
         style: {
           border: '1.5px solid #ADA996',
           borderRadius: '10px',
+          margin: '0.25rem',
           background: '#F2F2F2',
-          padding: '0.75rem',
           color: '#B29600'
         }
       }}
