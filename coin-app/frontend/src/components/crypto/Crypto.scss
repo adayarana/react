@@ -1,0 +1,65 @@
+@import '../../sass/var.scss';
+
+.crypto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    
+    .crypto-container__rank {
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        .rank__fav {
+            margin: 0.4rem;
+
+            > .fa-star {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .crypto-container__info {
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        .info__picture {
+            margin: 0.5rem;
+            
+            picture, img {
+                height: 35px;
+                width: 35px;
+            }
+          }
+    }
+
+    .crypto-container__data {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+
+        > div, span {
+            margin: 0.25rem;
+        }
+    }
+
+    .crypto-container__button {
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 415px) {
+
+    .crypto-container {
+
+        .crypto-container__data {
+            > div, span {
+                margin: 0.5rem;
+            }
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { Redirect, Link } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { signup, login, getUserToken } from '../../redux/actions/action.creators';
@@ -88,7 +88,7 @@ function Signup() {
         </small>
       </div>
     ) : (
-      <Redirect to="/portfolio" />
+      <Navigate to="/portfolio" />
     )
   );
 }

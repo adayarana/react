@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getAllTransactions,
@@ -135,7 +135,7 @@ function Portfolio() {
         </table>
       </div>
     ) : (
-      <Redirect to="/log" />
+      <Navigate to="/log" />
     )
   );
 }

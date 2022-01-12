@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import toast from 'react-hot-toast';
 import './Header.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -56,7 +57,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <button className="input-link" type="button" label="button">
+            <button className="input-link" type="button" label="button" onClick={() => toast.loading('Waiting update...')}>
               <em className="fas fa-moon" />
             </button>
           </li>
